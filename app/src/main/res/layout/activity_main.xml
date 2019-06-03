@@ -1,18 +1,246 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_gravity="center"
+    android:background="@color/blackcolor"
+    android:gravity="center"
     tools:context=".MainActivity">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+<ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
 
-</android.support.constraint.ConstraintLayout>
+        <LinearLayout
+
+            android:layout_width="match_parent"
+
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:orientation="vertical"
+            android:layout_height="wrap_content"
+            android:padding="50dp">
+
+            <TextView
+
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:background="@color/bg_gray"
+                android:fontFamily="sans-serif-light"
+                android:gravity="center"
+                android:text="SETTING"
+                android:textColor="@color/whitecolor"
+                android:textSize="25sp" />
+
+            <LinearLayout
+                android:padding="2dp"
+                android:paddingLeft="8dp"
+                android:background="@color/bg_gray2"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:src="@drawable/ic_sun"/>
+                <TextView
+                    android:layout_marginLeft="16dp"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif-light"
+                    android:text="Temperature"
+                    android:textColor="@color/whitecolor"
+                    android:textSize="20sp"/>
+                <Switch
+                    android:id="@+id/switchValTemp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textOn=" F "
+                    android:autoSizeMaxTextSize="50dp"
+                    android:textColor="@color/blackcolor"
+                    android:thumb="@drawable/customswitchselector"
+                    android:track="@drawable/custom_track"
+                    android:textOff=" C " />
+
+            </LinearLayout><View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/whitecolor"/>
+            <LinearLayout
+                android:padding="2dp"
+                android:paddingLeft="8dp"
+                android:background="@color/bg_gray2"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:src="@drawable/ic_alarm"/>
+                <TextView
+                    android:layout_marginLeft="16dp"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif-light"
+                    android:text="Time Format"
+                    android:textColor="@color/whitecolor"
+                    android:textSize="20sp"/>
+                <Switch
+                    android:id="@+id/switshValTime"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textOn=" 12 "
+
+                    android:textColor="@color/blackcolor"
+                    android:thumb="@drawable/customswitchselector"
+                    android:track="@drawable/custom_track"
+                    android:textOff=" 24 " />
+
+            </LinearLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/whitecolor"/>
+            <LinearLayout
+                android:id="@+id/changeWind"
+                android:padding="2dp"
+                android:paddingLeft="8dp"
+                android:background="@color/bg_gray2"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:src="@drawable/ic_flag" />
+                <TextView
+                    android:layout_marginLeft="16dp"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif-light"
+                    android:text="Wind Speed"
+                    android:textColor="@color/whitecolor"
+                    android:textSize="20sp"/>
+                <TextView
+                    android:id="@+id/kmph_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="KM/H >  "
+                    android:textSize="20sp"
+                    android:textColor="@color/whitecolor"
+                    android:thumb="@drawable/customswitchselector"
+
+                  />
+
+            </LinearLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/whitecolor"/>
+            <LinearLayout
+                android:padding="2dp"
+                android:paddingLeft="8dp"
+                android:background="@color/bg_gray2"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:src="@drawable/ic_ring" />
+                <TextView
+                    android:layout_marginLeft="16dp"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif-light"
+                    android:text="Notfication"
+                    android:textColor="@color/whitecolor"
+                    android:textSize="20sp"/>
+                <Switch
+                    android:id="@+id/switchNotif"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/blackcolor"
+
+                     />
+
+            </LinearLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/whitecolor"/>
+            <LinearLayout
+                android:padding="2dp"
+                android:paddingLeft="8dp"
+                android:background="@color/bg_gray2"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:src="@drawable/ic_timer"/>
+                <TextView
+                    android:layout_marginLeft="16dp"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif-light"
+                    android:text="Status Bar"
+                    android:textColor="@color/whitecolor"
+                    android:textSize="20sp"/>
+                <Switch
+                    android:id="@+id/switchStateBar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/blackcolor"
+
+
+                     />
+
+            </LinearLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/whitecolor"/>
+            <LinearLayout
+                android:padding="2dp"
+                android:paddingLeft="8dp"
+                android:background="@color/bg_gray2"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@color/bg_gray"
+                    android:text=" Done "
+                    android:onClick="saveSherdPrefrances"
+                    android:fontFamily="sans-serif-light"
+                    android:textSize="24sp"
+                    android:textColor="@color/whitecolor"
+                    />
+
+            </LinearLayout>
+
+        </LinearLayout>
+</ScrollView>
+</LinearLayout>
